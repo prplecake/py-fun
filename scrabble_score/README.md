@@ -4,12 +4,12 @@ Very simply, this script counts the scrabble score based on a string input.
 
 ## Examples
 
-```
+```shell
 $ python3 score.py Matthew Jorgensen
 Scrabble score: 32
 ```
 
-```
+```shell
 $ python3 score.py
 What is your name? Matthew Jorgensen
 Scrabble score: 32

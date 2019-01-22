@@ -1,6 +1,6 @@
 # py-rock-paper-scissors
 
-*Python 3*
+*Python 3 required.*
 
 A simple game of Rock, Paper, Scissors in Python. Inspired by and adapted from [rock-paper-scissors][0] by [nutgut on GitHub][1]. See [main differences][2].
 
