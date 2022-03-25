@@ -40,8 +40,7 @@ def RemoveLeadingDot(filename):
     head, tail = os.path.split(filename)
     if tail[:1] == ".":
         return os.path.join(head, tail[1:])
-    else:
-        return filename
+    return filename
 
 
 if debug is True:
