@@ -29,10 +29,7 @@ parser.add_argument(
     help="enables some (sparse) debugging features")
 args = parser.parse_args()
 
-if args.debug:
-    debug = True
-else:
-    debug = False
+debug = args.debug
 
 
 # remove leading dot from dotfiles:
