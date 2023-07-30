@@ -45,7 +45,7 @@ if debug is True:
 
 
 # append timestamp to filename
-def StampTime(filename, fmt='{fname}_%Y-%m-%d-%H-%M-%S{fext}'):
+def StampTime(filename, fmt="{fname}_%Y-%m-%d-%H-%M-%S{fext}"):
     # disect filename
     head, tail = os.path.split(filename)
     # disect tail ("test.txt" -> "text", ".txt")
@@ -89,7 +89,7 @@ def CopyFile(readFile, writeFile, lines):
                 i += 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if debug is True:
         pass
     else:
