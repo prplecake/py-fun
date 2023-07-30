@@ -15,11 +15,11 @@ import random
 class Opponent:
 
     def __init__(self):
-        self.__what = ''
+        self.__what = ""
 
     def randoms(self):
         digit = random.randint(0, 2)
-        self.__what = ['rock', 'paper', 'scissors'][digit]
+        self.__what = ["rock", "paper", "scissors"][digit]
 
     def get_what(self):
         return self.__what
@@ -27,9 +27,9 @@ class Opponent:
 
 def eval_game(game1, game2):
     game_dict = {
-        'rock': {'rock': 'tie', 'paper': 'lose', 'scissors': 'win'},
-        'paper': {'rock': 'win', 'paper': 'tie', 'scissors': 'lose'},
-        'scissors': {'rock': 'lose', 'paper': 'win', 'scissors': 'tie'},
+        "rock": {"rock": "tie", "paper": "lose", "scissors": "win"},
+        "paper": {"rock": "win", "paper": "tie", "scissors": "lose"},
+        "scissors": {"rock": "lose", "paper": "win", "scissors": "tie"},
     }
     result = game_dict[game1][game2]
     return result
@@ -48,35 +48,35 @@ Score goal: 3
 Be my quest, start (rock, paper, scissors):
           """)
     while player_profit < 3 and computer_profit < 3:
-        game = input('\t > ')
+        game = input("\t > ")
 
         Op.randoms()
         game2 = Op.get_what()
 
-        if game in ['rock', 'paper', 'scissors']:
-            print('\nYou picked: {}'.format(game), end='')
-            print('\tI picked: {}\n'.format(game2))
+        if game in ["rock", "paper", "scissors"]:
+            print("\nYou picked: {}".format(game), end="")
+            print("\tI picked: {}\n".format(game2))
         else:
-            print('Input not found. You lose.')
+            print("Input not found. You lose.")
             exit(1)
 
         result = eval_game(game, game2)
-        if result == 'win':
-            print('You win!')
+        if result == "win":
+            print("You win!")
             player_profit += 1
-        elif result == 'tie':
-            print('We tied...')
-        elif result == 'lose':
-            print('You lose!')
+        elif result == "tie":
+            print("We tied...")
+        elif result == "lose":
+            print("You lose!")
             computer_profit += 1
 
-        print('\nYour score:\t{}\nMy score:\t{}'.format(player_profit,
+        print("\nYour score:\t{}\nMy score:\t{}".format(player_profit,
                                                         computer_profit))
     if player_profit > computer_profit:
-        print('\n\tYou won!!')
+        print("\n\tYou won!!")
     elif player_profit < computer_profit:
-        print('\n\tI won!!')
+        print("\n\tI won!!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

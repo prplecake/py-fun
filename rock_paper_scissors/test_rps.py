@@ -2,7 +2,7 @@ import rps
 
 Op = rps.Opponent()
 
-options = ['rock', 'paper', 'scissors']
+options = ["rock", "paper", "scissors"]
 
 
 def test_random():
